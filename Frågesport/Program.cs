@@ -12,8 +12,6 @@ while (begin != "ja" && begin != "nej"){
 if (begin == "nej"){
     Console.Clear();
     Console.WriteLine("Skumt att starta ett program som man inte är redo att köra men okej");
-    Console.WriteLine("Tryck enter för att stänga programmet.");
-    Console.ReadLine();
 }
 else if (begin == "ja"){
     while (active == 1){
@@ -87,6 +85,7 @@ else if (begin == "ja"){
         }
         else{
             Console.WriteLine("Tyvärr inte! Tryck enter för att fortsätta");
+            Console.ReadLine();
         }
         Console.Clear();
         Console.WriteLine($"Bra jobbat {name}! Du fick " + score + " poäng!");
@@ -101,6 +100,7 @@ else if (begin == "ja"){
             continue;
         }
         else{
+            Console.Clear();
             Console.WriteLine("Tack för att du spelade!");
             active = 0;
         }
