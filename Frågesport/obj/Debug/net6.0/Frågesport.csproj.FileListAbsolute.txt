@@ -1,0 +1,15 @@
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\bin\Debug\net6.0\Frågesport.exe
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\bin\Debug\net6.0\Frågesport.deps.json
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\bin\Debug\net6.0\Frågesport.runtimeconfig.json
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\bin\Debug\net6.0\Frågesport.dll
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\bin\Debug\net6.0\Frågesport.pdb
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\obj\Debug\net6.0\Frågesport.csproj.AssemblyReference.cache
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\obj\Debug\net6.0\Frågesport.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\obj\Debug\net6.0\Frågesport.AssemblyInfoInputs.cache
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\obj\Debug\net6.0\Frågesport.AssemblyInfo.cs
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\obj\Debug\net6.0\Frågesport.csproj.CoreCompileInputs.cache
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\obj\Debug\net6.0\Frågesport.dll
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\obj\Debug\net6.0\refint\Frågesport.dll
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\obj\Debug\net6.0\Frågesport.pdb
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\obj\Debug\net6.0\Frågesport.genruntimeconfig.cache
+C:\Users\theo.lindqvist\Documents\Frågesport\Frågesport\Frågesport\obj\Debug\net6.0\ref\Frågesport.dll
