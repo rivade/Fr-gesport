@@ -80,7 +80,7 @@ else if (begin == "ja"){
             name = Console.ReadLine();
         }
         //Gör så att man måste skriva in något
-        
+
         Console.Clear();
         Console.WriteLine("Okej " + char.ToUpper(name[0]) + name.Substring(1) + ", första frågan!");
         //Skriver ut med stor första bokstav i namnet
@@ -153,7 +153,7 @@ else if (begin == "ja"){
             Console.ReadLine();
         }
         Console.Clear();
-        Console.WriteLine("Bra jobbat " + char.ToUpper(name[0]) + name.Substring(1) + "! Du fick " + score + "poäng!");
+        Console.WriteLine("Bra jobbat " + char.ToUpper(name[0]) + name.Substring(1) + "! Du fick " + score + " poäng!");
         if (score == 4){
             Console.WriteLine("Alla rätt!");
             win();
@@ -169,6 +169,23 @@ else if (begin == "ja"){
             continue;
         }
         else{
+            Console.WriteLine("Vill du se facit?");
+            string facit = Console.ReadLine().ToLower();
+            while (facit != "ja" && facit != "nej"){
+                Console.WriteLine("Du måste välja antingen ja eller nej");
+                Console.WriteLine("Vill du se facit?");
+                facit = Console.ReadLine().ToLower();
+            }
+            if (facit == "ja"){
+                Console.Clear();
+                Console.WriteLine("Fråga 1: C");
+                Console.WriteLine("Fråga 2: A");
+                Console.WriteLine("Fråga 3: C");
+                Console.WriteLine("Fråga 4: Ouagadougou");
+                Console.WriteLine("Tryck enter för att fortsätta");
+                Console.ReadLine();
+            }
+
             Console.Clear();
             Console.WriteLine("Tack för att du spelade!");
             active = 0;
