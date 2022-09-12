@@ -1,6 +1,61 @@
-﻿int active = 1;
+﻿void world(){
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine();
+    Console.WriteLine(@"               ,,ggddY'''Ybbgg,,
+          ,agd888b,_ 'Y8, ___`''Ybga,
+       ,gdP''88888888baa,.''8b    '888g,
+     ,dP'     ]888888888P'  'Y     `888Yb,
+   ,dP'      ,88888888P'  db,       '8P''Yb,
+  ,8'       ,888888888b, d8888a           '8,
+ ,8'        d88888888888,88P'' a,          `8,
+,8'         88888888888888PP'  ''           `8,
+d'          I88888888888P'                   `b
+8           `8'88P''Y8P'                      8
+8            Y 8[  _ '                        8
+8              'Y8d8b  'Y a                   8
+8                 `''8d,   __                 8
+Y,                    `'8bd888b,             ,P
+`8,                     ,d8888888baaa       ,8'
+ `8,                    888888888888'      ,8'
+  `8a                   '8888888888I      a8'
+   `Yba                  `Y8888888P'    adP'
+     'Yba                 `888888P'   adY'
+       `'Yba,             d8888P' ,adP''
+          `'Y8baa,      ,d888P,ad8P''
+               ``''YYba8888P'''''");
+    Console.WriteLine();
+    Console.ForegroundColor = ConsoleColor.White;
+}
+void win(){
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.WriteLine();
+    Console.WriteLine(@"-----------------------------------------------------
+   _                             .-.
+  / )  .-.    ___          __   (   )
+ ( (  (   ) .'___)        (__'-._) (
+  \ '._) (,'.'               '.     '-.
+   '.      /  '\               '    -. '.
+     )    /   \ \   .-.   ,'.   )  (  ',_)    _
+   .'    (     \ \ (   \ . .' .'    )    .-. ( \
+  (  .''. '.    \ \|  .' .' ,',--, /    (   ) ) )
+   \ \   ', :    \    .-'  ( (  ( (     _) (,' /
+    \ \   : :    )  / _     ' .  \ \  ,'      /
+  ,' ,'   : ;   /  /,' '.   /.'  / / ( (\    (
+  '.'      '   (    .-'. \       ''   \_)\    \
+                \  |    \ \__             )    )
+              ___\ |     \___;           /  , /
+             /  ___)                    (  ( (
+             '.'                         ) ;) ;
+                                        (_/(_/
+----------------------------------------------------");
+Console.WriteLine();
+    Console.ForegroundColor = ConsoleColor.White;
+}
+
+int active = 1;
 Console.WriteLine("Välkommen till min frågesport om geografi!");
 Console.WriteLine("Frågesporten består av 4 frågor med ökande svårighetsgrad.");
+world();
 Console.WriteLine("Är du redo att börja?");
 string begin = Console.ReadLine().ToLower();
 while (begin != "ja" && begin != "nej"){
@@ -82,6 +137,7 @@ else if (begin == "ja"){
         if (answer == "ouagadougou"){
             score = score + 1;
             Console.WriteLine("Korrekt! Tryck enter för att fortsätta");
+            Console.ReadLine();
         }
         else{
             Console.WriteLine("Tyvärr inte! Tryck enter för att fortsätta");
@@ -89,6 +145,10 @@ else if (begin == "ja"){
         }
         Console.Clear();
         Console.WriteLine($"Bra jobbat {name}! Du fick " + score + " poäng!");
+        if (score == 4){
+            Console.WriteLine("Alla rätt!");
+            win();
+        }
         Console.WriteLine("Vill du försöka igen?");
         string retry = Console.ReadLine().ToLower();
         while (retry != "ja" && retry != "nej"){
