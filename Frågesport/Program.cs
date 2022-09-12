@@ -74,8 +74,15 @@ else if (begin == "ja"){
         Console.Clear();
         Console.WriteLine("Vad heter du som spelar?");
         string name = Console.ReadLine();
+        while (name.Length == 0){
+            Console.WriteLine("Du måste skriva ett namn");
+            Console.WriteLine("Vad heter du som spelar?");
+            name = Console.ReadLine();
+        }
         Console.Clear();
-        Console.WriteLine($"Okej {name}, första frågan!");
+        Console.WriteLine("Okej " + char.ToUpper(name[0]) + name.Substring(1) + ", första frågan!");
+        //Skriver ut med stor första bokstav i namnet
+
         Console.WriteLine("Vilket av följande länder ligger INTE i Afrika?");
         Console.WriteLine(@"(A) Nigeria   (B) Mozambique   (C) Bhutan   (D) Algeriet");
         string answer = Console.ReadLine().ToLower();
@@ -93,7 +100,7 @@ else if (begin == "ja"){
             Console.ReadLine();
         }
         Console.Clear();
-        Console.WriteLine($"Okej {name}, andra frågan!");
+        Console.WriteLine("Okej " + char.ToUpper(name[0]) + name.Substring(1) + ", andra frågan!");
         Console.WriteLine("I vilken världsdel ligger Guatemala?");
         Console.WriteLine(@"(A) Nordamerika   (B) Sydamerika   (C) Asien   (D) Inget av alternativen");
         answer = Console.ReadLine().ToLower();
@@ -111,7 +118,7 @@ else if (begin == "ja"){
             Console.ReadLine();
         }
         Console.Clear();
-        Console.WriteLine($"Okej {name}, tredje frågan!");
+        Console.WriteLine("Okej " + char.ToUpper(name[0]) + name.Substring(1) + ", tredje frågan!");
         Console.WriteLine("Vad heter huvudstaden i Georgien?");
         Console.WriteLine(@"(A) Teheran   (B) Jerevan   (C) Tbilisi   (D) Guvernementet Baku");
         answer = Console.ReadLine().ToLower();
@@ -129,7 +136,7 @@ else if (begin == "ja"){
             Console.ReadLine();
         }
         Console.Clear();
-        Console.WriteLine($"Okej {name}, sista frågan!");
+        Console.WriteLine("Okej " + char.ToUpper(name[0]) + name.Substring(1) + ", sista frågan!");
         Console.WriteLine("Denna fråga är inte multiple-choice, utan kräver att du skriver rätt svar!");
         Console.WriteLine("Var nogrann med stavning!");
         Console.WriteLine("Vad heter Burkina Fasos huvudstad?");
@@ -144,7 +151,7 @@ else if (begin == "ja"){
             Console.ReadLine();
         }
         Console.Clear();
-        Console.WriteLine($"Bra jobbat {name}! Du fick " + score + " poäng!");
+        Console.WriteLine("Bra jobbat " + char.ToUpper(name[0]) + name.Substring(1) + "! Du fick " + score + "poäng!");
         if (score == 4){
             Console.WriteLine("Alla rätt!");
             win();
