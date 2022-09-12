@@ -79,6 +79,8 @@ else if (begin == "ja"){
             Console.WriteLine("Vad heter du som spelar?");
             name = Console.ReadLine();
         }
+        //Gör så att man måste skriva in något
+        
         Console.Clear();
         Console.WriteLine("Okej " + char.ToUpper(name[0]) + name.Substring(1) + ", första frågan!");
         //Skriver ut med stor första bokstav i namnet
