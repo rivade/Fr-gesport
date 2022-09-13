@@ -169,6 +169,7 @@ else if (begin == "ja"){
             continue;
         }
         else{
+            Console.Clear();
             Console.WriteLine("Vill du se facit?");
             string facit = Console.ReadLine().ToLower();
             while (facit != "ja" && facit != "nej"){
