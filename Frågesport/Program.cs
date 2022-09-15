@@ -143,6 +143,13 @@ else if (begin == "ja"){
         Console.WriteLine("Var nogrann med stavning!");
         Console.WriteLine("Vad heter Burkina Fasos huvudstad?");
         answer = Console.ReadLine().ToLower();
+        while (answer.Length == 0){
+            Console.WriteLine("Du måste skriva ett svar");
+            Console.WriteLine("Vad heter Burkina Fasos huvudstad?");
+            answer = Console.ReadLine();
+        }
+        //Förhindrar att användaren råkar trycka på enter
+        
         if (answer == "ouagadougou"){
             score = score + 1;
             Console.WriteLine("Korrekt! Tryck enter för att fortsätta");
