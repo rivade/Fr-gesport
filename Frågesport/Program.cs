@@ -1,4 +1,5 @@
-﻿void world(){
+﻿void world()
+{
     Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine();
     Console.WriteLine(@"               ,,ggddY'''Ybbgg,,
@@ -26,7 +27,8 @@ Y,                    `'8bd888b,             ,P
     Console.WriteLine();
     Console.ForegroundColor = ConsoleColor.White;
 }
-void win(){
+void win()
+{
     Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine();
     Console.WriteLine(@"-----------------------------------------------------
@@ -48,9 +50,33 @@ void win(){
              '.'                         ) ;) ;
                                         (_/(_/
 ----------------------------------------------------");
-Console.WriteLine();
+    Console.WriteLine();
     Console.ForegroundColor = ConsoleColor.White;
 }
+
+int AskQuestion(string qText, string rightAnswer)
+{
+    Console.WriteLine(qText);
+
+    string answer = Console.ReadLine().ToLower();
+    while (answer != "a" && answer != "b" && answer != "c" && answer != "d")
+        {
+            Console.WriteLine("Du måste välja antingen A, B, C eller D");
+            answer = Console.ReadLine().ToLower();
+        }
+    if (answer == rightAnswer)
+    {
+        Console.WriteLine("Korrekt! Tryck enter för att fortsätta");
+        Console.ReadLine();
+        return 1;
+    }
+    else{
+        Console.WriteLine("Tyvärr inte! Tryck enter för att fortsätta");
+        Console.ReadLine();
+        return 0;
+    }
+}
+
 
 int active = 1;
 Console.WriteLine("Välkommen till min frågesport om geografi!");
@@ -58,23 +84,28 @@ Console.WriteLine("Frågesporten består av 4 frågor med ökande svårighetsgra
 world();
 Console.WriteLine("Är du redo att börja?");
 string begin = Console.ReadLine().ToLower();
-while (begin != "ja" && begin != "nej"){
+while (begin != "ja" && begin != "nej")
+{
     Console.WriteLine("Du måste välja antingen ja eller nej.");
     Console.WriteLine("Är du redo att börja?");
     begin = Console.ReadLine().ToLower();
 }
 
-if (begin == "nej"){
+if (begin == "nej")
+{
     Console.Clear();
     Console.WriteLine("Skumt att starta ett program som man inte är redo att köra men okej");
 }
-else if (begin == "ja"){
-    while (active == 1){
+else if (begin == "ja")
+{
+    while (active == 1)
+    {
         int score = 0;
         Console.Clear();
         Console.WriteLine("Vad heter du som spelar?");
         string name = Console.ReadLine();
-        while (name.Length == 0){
+        while (name.Length == 0)
+        {
             Console.WriteLine("Du måste skriva ett namn");
             Console.WriteLine("Vad heter du som spelar?");
             name = Console.ReadLine();
@@ -85,106 +116,70 @@ else if (begin == "ja"){
         Console.WriteLine("Okej " + char.ToUpper(name[0]) + name.Substring(1) + ", första frågan!");
         //Skriver ut med stor första bokstav i namnet
 
-        Console.WriteLine("Vilket av följande länder ligger INTE i Afrika?");
-        Console.WriteLine(@"(A) Nigeria   (B) Mozambique   (C) Bhutan   (D) Algeriet");
-        string answer = Console.ReadLine().ToLower();
-        while (answer != "a" && answer != "b" && answer != "c" && answer != "d"){
-            Console.WriteLine("Du måste välja antingen A, B, C eller D");
-            answer = Console.ReadLine().ToLower();
-        }
-        if (answer == "c"){
-            score = score + 1;
-            Console.WriteLine("Korrekt! Tryck enter för att fortsätta");
-            Console.ReadLine();
-        }
-        else{
-            Console.WriteLine("Tyvärr inte! Tryck enter för att fortsätta");
-            Console.ReadLine();
-        }
+        score += AskQuestion("Vilket av följande länder ligger INTE i Afrika?\n" + @"(A) Nigeria   (B) Mozambique   (C) Bhutan   (D) Algeriet", "c");
         Console.Clear();
         Console.WriteLine("Okej " + char.ToUpper(name[0]) + name.Substring(1) + ", andra frågan!");
-        Console.WriteLine("I vilken världsdel ligger Guatemala?");
-        Console.WriteLine(@"(A) Nordamerika   (B) Sydamerika   (C) Asien   (D) Inget av alternativen");
-        answer = Console.ReadLine().ToLower();
-        while (answer != "a" && answer != "b" && answer != "c" && answer != "d"){
-            Console.WriteLine("Du måste välja antingen A, B, C eller D");
-            answer = Console.ReadLine().ToLower();
-        }
-        if (answer == "a"){
-            score = score + 1;
-            Console.WriteLine("Korrekt! Tryck enter för att fortsätta");
-            Console.ReadLine();
-        }
-        else{
-            Console.WriteLine("Tyvärr inte! Tryck enter för att fortsätta");
-            Console.ReadLine();
-        }
+        score += AskQuestion("I vilken världsdel ligger Guatemala?\n" + @"(A) Nordamerika   (B) Sydamerika   (C) Asien   (D) Inget av alternativen", "a");
         Console.Clear();
         Console.WriteLine("Okej " + char.ToUpper(name[0]) + name.Substring(1) + ", tredje frågan!");
-        Console.WriteLine("Vad heter huvudstaden i Georgien?");
-        Console.WriteLine(@"(A) Teheran   (B) Jerevan   (C) Tbilisi   (D) Guvernementet Baku");
-        answer = Console.ReadLine().ToLower();
-        while (answer != "a" && answer != "b" && answer != "c" && answer != "d"){
-            Console.WriteLine("Du måste välja antingen A, B, C eller D");
-            answer = Console.ReadLine().ToLower();
-        }
-        if (answer == "c"){
-            score = score + 1;
-            Console.WriteLine("Korrekt! Tryck enter för att fortsätta");
-            Console.ReadLine();
-        }
-        else{
-            Console.WriteLine("Tyvärr inte! Tryck enter för att fortsätta");
-            Console.ReadLine();
-        }
+        score += AskQuestion("Vad heter huvudstaden i Georgien?\n" + @"(A) Teheran   (B) Jerevan   (C) Tbilisi   (D) Guvernementet Baku", "c");
         Console.Clear();
         Console.WriteLine("Okej " + char.ToUpper(name[0]) + name.Substring(1) + ", sista frågan!");
         Console.WriteLine("Denna fråga är inte multiple-choice, utan kräver att du skriver rätt svar!");
         Console.WriteLine("Var nogrann med stavning!");
         Console.WriteLine("Vad heter Burkina Fasos huvudstad?");
-        answer = Console.ReadLine().ToLower();
-        while (answer.Length == 0){
+        string answer = Console.ReadLine().ToLower();
+        while (answer.Length == 0)
+        {
             Console.WriteLine("Du måste skriva ett svar");
             Console.WriteLine("Vad heter Burkina Fasos huvudstad?");
             answer = Console.ReadLine();
         }
         //Förhindrar att användaren råkar trycka på enter
-        
-        if (answer == "ouagadougou"){
-            score = score + 1;
+
+        if (answer == "ouagadougou")
+        {
+            score += 1;
             Console.WriteLine("Korrekt! Tryck enter för att fortsätta");
             Console.ReadLine();
         }
-        else{
+        else
+        {
             Console.WriteLine("Tyvärr inte! Tryck enter för att fortsätta");
             Console.ReadLine();
         }
         Console.Clear();
         Console.WriteLine("Bra jobbat " + char.ToUpper(name[0]) + name.Substring(1) + "! Du fick " + score + " poäng!");
-        if (score == 4){
+        if (score == 4)
+        {
             Console.WriteLine("Alla rätt!");
             win();
         }
         Console.WriteLine("Vill du försöka igen?");
         string retry = Console.ReadLine().ToLower();
-        while (retry != "ja" && retry != "nej"){
+        while (retry != "ja" && retry != "nej")
+        {
             Console.WriteLine("Du måste välja antingen ja eller nej");
             Console.WriteLine("Vill du försöka igen?");
             retry = Console.ReadLine();
         }
-        if (retry == "ja"){
+        if (retry == "ja")
+        {
             continue;
         }
-        else{
+        else
+        {
             Console.Clear();
             Console.WriteLine("Vill du se facit?");
             string facit = Console.ReadLine().ToLower();
-            while (facit != "ja" && facit != "nej"){
+            while (facit != "ja" && facit != "nej")
+            {
                 Console.WriteLine("Du måste välja antingen ja eller nej");
                 Console.WriteLine("Vill du se facit?");
                 facit = Console.ReadLine().ToLower();
             }
-            if (facit == "ja"){
+            if (facit == "ja")
+            {
                 Console.Clear();
                 Console.WriteLine("Fråga 1: C");
                 Console.WriteLine("Fråga 2: A");
