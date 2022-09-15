@@ -103,7 +103,7 @@ else if (begin == "ja")
         int score = 0;
         Console.Clear();
         Console.WriteLine("Vad heter du som spelar?");
-        string name = Console.ReadLine();
+        string name = Console.ReadLine().ToLower();
         while (name.Length == 0)
         {
             Console.WriteLine("Du måste skriva ett namn");
