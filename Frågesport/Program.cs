@@ -108,7 +108,7 @@ else if (begin == "ja")
         {
             Console.WriteLine("Du måste skriva ett namn");
             Console.WriteLine("Vad heter du som spelar?");
-            name = Console.ReadLine();
+            name = Console.ReadLine().ToLower();
         }
         //Gör så att man måste skriva in något
 
