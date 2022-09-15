@@ -193,12 +193,11 @@ else if (begin == "ja"){
                 Console.WriteLine("Tryck enter för att fortsätta");
                 Console.ReadLine();
             }
-
-            Console.Clear();
-            Console.WriteLine("Tack för att du spelade!");
             active = 0;
         }
     }
 }
+Console.Clear();
+Console.WriteLine("Tack för att du spelade!");
 Console.WriteLine("Tryck enter för att stänga programmet");
 Console.ReadLine();
