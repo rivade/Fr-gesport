@@ -95,6 +95,9 @@ if (begin == "nej")
 {
     Console.Clear();
     Console.WriteLine("Skumt att starta ett program som man inte är redo att köra men okej");
+    Console.WriteLine("Tryck enter för att stänga programmet");
+    Console.ReadLine();
+    System.Environment.Exit(1);
 }
 else if (begin == "ja")
 {
