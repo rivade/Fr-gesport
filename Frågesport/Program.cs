@@ -54,7 +54,7 @@ static void Win()
     Console.ForegroundColor = ConsoleColor.White;
 }
 
-int AskQuestion(string qText, string rightAnswer)
+static int AskQuestion(string qText, string rightAnswer)
 {
     Console.WriteLine(qText);
 
