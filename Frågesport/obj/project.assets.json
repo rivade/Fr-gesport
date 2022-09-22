@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\theo.lindqvist\\Documents\\Frågesport\\Frågesport\\Frågesport\\Frågesport.csproj",
+      "projectUniqueName": "C:\\Users\\theo.lindqvist\\Documents\\NTI Programmering\\Frågesport\\Frågesport\\Frågesport\\Frågesport.csproj",
       "projectName": "Frågesport",
-      "projectPath": "c:\\Users\\theo.lindqvist\\Documents\\Frågesport\\Frågesport\\Frågesport\\Frågesport.csproj",
+      "projectPath": "C:\\Users\\theo.lindqvist\\Documents\\NTI Programmering\\Frågesport\\Frågesport\\Frågesport\\Frågesport.csproj",
       "packagesPath": "C:\\Users\\theo.lindqvist\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\theo.lindqvist\\Documents\\Frågesport\\Frågesport\\Frågesport\\obj\\",
+      "outputPath": "C:\\Users\\theo.lindqvist\\Documents\\NTI Programmering\\Frågesport\\Frågesport\\Frågesport\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
