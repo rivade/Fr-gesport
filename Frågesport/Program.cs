@@ -1,4 +1,4 @@
-﻿void world()
+﻿static void World()
 {
     Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine();
@@ -27,7 +27,7 @@ Y,                    `'8bd888b,             ,P
     Console.WriteLine();
     Console.ForegroundColor = ConsoleColor.White;
 }
-void win()
+static void Win()
 {
     Console.ForegroundColor = ConsoleColor.Green;
     Console.WriteLine();
@@ -81,7 +81,7 @@ int AskQuestion(string qText, string rightAnswer)
 int active = 1;
 Console.WriteLine("Välkommen till min frågesport om geografi!");
 Console.WriteLine("Frågesporten består av 4 frågor med ökande svårighetsgrad.");
-world();
+World();
 Console.WriteLine("Är du redo att börja?");
 string begin = Console.ReadLine().ToLower();
 while (begin != "ja" && begin != "nej")
@@ -156,7 +156,7 @@ else if (begin == "ja")
         if (score == 4)
         {
             Console.WriteLine("Alla rätt!");
-            win();
+            Win();
         }
         Console.WriteLine("Vill du försöka igen?");
         string retry = Console.ReadLine().ToLower();
